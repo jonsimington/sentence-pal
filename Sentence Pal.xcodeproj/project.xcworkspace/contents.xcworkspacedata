@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../tale_of_two_cities.swift">
+   </FileRef>
+   <FileRef
       location = "self:Sentence Pal.xcodeproj">
    </FileRef>
 </Workspace>

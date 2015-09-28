@@ -1,0 +1,6 @@
+platform :ios, '8.3'
+use_frameworks!
+
+target 'Sentence Pal' do
+    pod 'Parsimmon', '~> 0.4.0',  :git => "https://github.com/jonsimington/Parsimmon.git"
+end

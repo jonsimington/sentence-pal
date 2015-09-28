@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A28384DABE3C0D6D990058A /* Pods_Sentence_Pal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F578021A6670095C5C9204 /* Pods_Sentence_Pal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD9683951BB8ED98000B4F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9683941BB8ED98000B4F1B /* AppDelegate.swift */; };
 		DD9683971BB8ED98000B4F1B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9683961BB8ED98000B4F1B /* FirstViewController.swift */; };
 		DD9683991BB8ED98000B4F1B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9683981BB8ED98000B4F1B /* SecondViewController.swift */; };
@@ -27,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003D01E1DDA298009651BAC6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1C015535CF46B2B74A1EC30E /* Pods-Sentence Pal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentence Pal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sentence Pal/Pods-Sentence Pal.release.xcconfig"; sourceTree = "<group>"; };
+		1F139AFA63F5F7CEAD5F8A96 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		27F578021A6670095C5C9204 /* Pods_Sentence_Pal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sentence_Pal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		591BB828333DFB1C2E3C349E /* Pods-Sentence Pal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentence Pal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sentence Pal/Pods-Sentence Pal.debug.xcconfig"; sourceTree = "<group>"; };
+		5B1B5CFEB55E18E4BC72C1FD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD96838F1BB8ED98000B4F1B /* Sentence Pal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sentence Pal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9683931BB8ED98000B4F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9683941BB8ED98000B4F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A28384DABE3C0D6D990058A /* Pods_Sentence_Pal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +66,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E61F2314BB299E22CCDAE57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F139AFA63F5F7CEAD5F8A96 /* Pods.debug.xcconfig */,
+				003D01E1DDA298009651BAC6 /* Pods.release.xcconfig */,
+				591BB828333DFB1C2E3C349E /* Pods-Sentence Pal.debug.xcconfig */,
+				1C015535CF46B2B74A1EC30E /* Pods-Sentence Pal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A70022FF58F6519F02F9ED03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B1B5CFEB55E18E4BC72C1FD /* Pods.framework */,
+				27F578021A6670095C5C9204 /* Pods_Sentence_Pal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD9683861BB8ED98000B4F1B = {
 			isa = PBXGroup;
 			children = (
 				DD9683911BB8ED98000B4F1B /* Sentence Pal */,
 				DD9683A91BB8ED98000B4F1B /* Sentence PalTests */,
 				DD9683901BB8ED98000B4F1B /* Products */,
+				4E61F2314BB299E22CCDAE57 /* Pods */,
+				A70022FF58F6519F02F9ED03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD9683B01BB8ED98000B4F1B /* Build configuration list for PBXNativeTarget "Sentence Pal" */;
 			buildPhases = (
+				EB5C4275B7637CC5AF2E177A /* Check Pods Manifest.lock */,
 				DD96838B1BB8ED98000B4F1B /* Sources */,
 				DD96838C1BB8ED98000B4F1B /* Frameworks */,
 				DD96838D1BB8ED98000B4F1B /* Resources */,
+				2191840A93002B0977252019 /* Embed Pods Frameworks */,
+				9CE3B1978B838B0E5F3F22D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +242,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2191840A93002B0977252019 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sentence Pal/Pods-Sentence Pal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CE3B1978B838B0E5F3F22D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sentence Pal/Pods-Sentence Pal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB5C4275B7637CC5AF2E177A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD96838B1BB8ED98000B4F1B /* Sources */ = {
@@ -342,6 +423,7 @@
 		};
 		DD9683B11BB8ED98000B4F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591BB828333DFB1C2E3C349E /* Pods-Sentence Pal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Sentence Pal/Info.plist";
@@ -352,6 +434,7 @@
 		};
 		DD9683B21BB8ED98000B4F1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C015535CF46B2B74A1EC30E /* Pods-Sentence Pal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Sentence Pal/Info.plist";
@@ -413,6 +496,7 @@
 				DD9683B21BB8ED98000B4F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD9683B31BB8ED98000B4F1B /* Build configuration list for PBXNativeTarget "Sentence PalTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +505,7 @@
 				DD9683B51BB8ED98000B4F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
