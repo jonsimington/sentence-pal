@@ -1,10 +1,10 @@
 # Parsimmon
 
-[![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon) (:warning: The build is going to be :apple: until Travis supports the latest Xcode. Promise the tests pass locally!)
+[![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon)
 
 Parsimmon is a wee linguistics toolkit for iOS written in Swift.
 
-We currently support Swift 1.2. If you are looking for Objective-C, please use version 0.3.4 or earlier.
+We currently support Swift 2.0. If you are looking for Objective-C, please use version 0.3.4 or earlier.
 
 
 ## Toolkit
@@ -22,7 +22,7 @@ Currently available tools:
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/) version 0.36 or higher. Just add the following line to your Podfile:
 
 ```ruby
-pod 'Parsimmon', '~> 0.4.0'
+pod 'Parsimmon', '~> 0.5.0'
 ```
 
 
@@ -39,7 +39,7 @@ import Parsimmon
 ```swift
 let tokenizer = Tokenizer()
 let tokens = tokenizer.tokenize("The quick brown fox jumps over the lazy dog")
-println(tokens)
+print(tokens)
 ```
 
 ```
@@ -62,7 +62,7 @@ dog
 ```swift
 let tagger = Tagger()
 let taggedTokens = tagger.tagWordsInText("The quick brown fox jumps over the lazy dog")
-println(taggedTokens)
+print(taggedTokens)
 ```
 
 ```
@@ -85,7 +85,7 @@ println(taggedTokens)
 ```swift
 let lemmatizer = Lemmatizer()
 let lemmatizedTokens = lemmatizer.lemmatizeWordsInText("Diane, I'm holding in my hand a small box of chocolate bunnies.")
-println(lemmatizedTokens)
+print(lemmatizedTokens)
 ```
 
 ```
@@ -126,8 +126,8 @@ classifier.trainWithText("and fish go blub", category: "spam")
 let firstExample = "use the eggs in the fridge."
 let secondExample = "what does the fish say?"
 
-println("\(firstExample) => \(classifier.classify(firstExample))")
-println("\(secondExample) => \(classifier.classify(secondExample))")
+print("\(firstExample) => \(classifier.classify(firstExample))")
+print("\(secondExample) => \(classifier.classify(secondExample))")
 ```
 
 ```

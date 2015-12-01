@@ -1,19 +1,19 @@
 PODS:
-  - Parsimmon (0.4.0)
+  - Parsimmon (0.5.0)
 
 DEPENDENCIES:
-  - Parsimmon (from `https://github.com/jonsimington/Parsimmon.git`)
+  - Parsimmon (from `git@github.com:jonsimington/Parsimmon.git`)
 
 EXTERNAL SOURCES:
   Parsimmon:
-    :git: https://github.com/jonsimington/Parsimmon.git
+    :git: git@github.com:jonsimington/Parsimmon.git
 
 CHECKOUT OPTIONS:
   Parsimmon:
-    :commit: ae4a6dd48cd25e49915d4183501e78c1a7369837
-    :git: https://github.com/jonsimington/Parsimmon.git
+    :commit: 84a644139a685a0f9456a41b5fdb475e1a768a6f
+    :git: git@github.com:jonsimington/Parsimmon.git
 
 SPEC CHECKSUMS:
-  Parsimmon: 9fe1f416f5d0c63c28ba14bd4f1bbbfec458a7d3
+  Parsimmon: db98d89de71c085dbc7e839f1296dc73cdeb94bb
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
