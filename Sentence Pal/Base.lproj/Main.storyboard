@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Helvetica.ttc">
+            <string>Helvetica</string>
+        </mutableArray>
         <mutableArray key="ProductSans-Regular.ttf">
             <string>ProductSans-Regular</string>
             <string>ProductSans-Regular</string>
@@ -36,8 +41,9 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="78"/>
                                 <color key="backgroundColor" red="1" green="0.84273729590000002" blue="0.74757281549999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="2"/>
                                 <state key="normal" title="Generate New Sentences">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="generateSentencesButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="A0s-6j-a4l"/>
@@ -55,9 +61,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g6s-bw-EBE" userLabel="oneSentenceLabel">
-                                <rect key="frame" x="59" y="187" width="59" height="31"/>
-                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="clip" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g6s-bw-EBE" userLabel="oneSentenceLabel">
+                                <rect key="frame" x="59" y="187" width="525" height="31"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,9 +76,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m7t-FL-oa6" userLabel="twoSentenceLabel">
-                                <rect key="frame" x="59" y="265" width="59" height="31"/>
-                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="clip" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m7t-FL-oa6" userLabel="twoSentenceLabel">
+                                <rect key="frame" x="59" y="265" width="525" height="31"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -79,9 +91,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3r0-35-QiZ" userLabel="threeSentenceLabel">
-                                <rect key="frame" x="59" y="351" width="59" height="31"/>
-                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="clip" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3r0-35-QiZ" userLabel="threeSentenceLabel">
+                                <rect key="frame" x="59" y="351" width="525" height="31"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -91,9 +106,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-ab-zIH" userLabel="fourSentenceLabel">
-                                <rect key="frame" x="59" y="445" width="59" height="31"/>
-                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="clip" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-ab-zIH" userLabel="fourSentenceLabel">
+                                <rect key="frame" x="59" y="445" width="525" height="31"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -103,28 +121,49 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yKc-US-ipV" userLabel="fiveSentenceLabel">
-                                <rect key="frame" x="59" y="540" width="59" height="31"/>
-                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="clip" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yKc-US-ipV" userLabel="fiveSentenceLabel">
+                                <rect key="frame" x="59" y="540" width="525" height="31"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="m7t-FL-oa6" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="2kW-ZA-Kpa"/>
+                            <constraint firstItem="m7t-FL-oa6" firstAttribute="width" secondItem="g6s-bw-EBE" secondAttribute="width" id="966-I9-5Ta"/>
                             <constraint firstItem="okN-a4-Ggi" firstAttribute="top" secondItem="3Jv-9z-TCu" secondAttribute="bottom" constant="50" id="9eC-wT-7rf"/>
                             <constraint firstItem="rdh-ja-DEl" firstAttribute="top" secondItem="Urd-yG-gTP" secondAttribute="bottom" constant="55" id="ACq-SG-cyn"/>
+                            <constraint firstItem="nU6-ab-zIH" firstAttribute="height" secondItem="yKc-US-ipV" secondAttribute="height" id="HGP-dL-pmJ"/>
+                            <constraint firstItem="rdh-ja-DEl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Haq-Ho-Nf7"/>
+                            <constraint firstItem="nU6-ab-zIH" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="Hq1-70-jee"/>
+                            <constraint firstItem="nU6-ab-zIH" firstAttribute="width" secondItem="yKc-US-ipV" secondAttribute="width" id="J9e-mm-H3s"/>
+                            <constraint firstItem="Urd-yG-gTP" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="O2p-kp-V7x"/>
                             <constraint firstItem="3r0-35-QiZ" firstAttribute="top" secondItem="m7t-FL-oa6" secondAttribute="bottom" constant="55" id="QVc-Dq-4Ft"/>
+                            <constraint firstItem="m7t-FL-oa6" firstAttribute="width" secondItem="3r0-35-QiZ" secondAttribute="width" id="STD-MU-Eqf"/>
+                            <constraint firstItem="3r0-35-QiZ" firstAttribute="height" secondItem="nU6-ab-zIH" secondAttribute="height" id="TN4-ov-mty"/>
                             <constraint firstItem="yKc-US-ipV" firstAttribute="leading" secondItem="AAK-dh-cAZ" secondAttribute="trailing" constant="29" id="UbR-v4-dfD"/>
                             <constraint firstItem="Urd-yG-gTP" firstAttribute="top" secondItem="okN-a4-Ggi" secondAttribute="bottom" constant="47" id="YNT-FE-mD4"/>
                             <constraint firstItem="yKc-US-ipV" firstAttribute="top" secondItem="nU6-ab-zIH" secondAttribute="bottom" constant="64" id="cdf-8C-uhQ"/>
+                            <constraint firstItem="m7t-FL-oa6" firstAttribute="height" secondItem="g6s-bw-EBE" secondAttribute="height" id="dy6-RP-fcH"/>
                             <constraint firstItem="DDA-kT-Cqv" firstAttribute="top" secondItem="rdh-ja-DEl" secondAttribute="bottom" constant="63" id="g4k-lg-pPK"/>
                             <constraint firstItem="AAK-dh-cAZ" firstAttribute="top" secondItem="DDA-kT-Cqv" secondAttribute="bottom" constant="64" id="gRq-hw-1G7"/>
+                            <constraint firstItem="okN-a4-Ggi" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="hWn-V1-mI5"/>
+                            <constraint firstItem="yKc-US-ipV" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="q1Z-C9-g6C"/>
+                            <constraint firstItem="DDA-kT-Cqv" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="qta-KU-GVN"/>
                             <constraint firstAttribute="centerX" secondItem="3Jv-9z-TCu" secondAttribute="centerX" id="r91-vB-aal"/>
                             <constraint firstItem="nU6-ab-zIH" firstAttribute="top" secondItem="3r0-35-QiZ" secondAttribute="bottom" constant="63" id="rOO-Qm-Z7s"/>
+                            <constraint firstItem="AAK-dh-cAZ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="sXD-Ii-ore"/>
                             <constraint firstItem="nU6-ab-zIH" firstAttribute="leading" secondItem="DDA-kT-Cqv" secondAttribute="trailing" constant="28" id="sgf-1O-xlc"/>
                             <constraint firstItem="g6s-bw-EBE" firstAttribute="leading" secondItem="okN-a4-Ggi" secondAttribute="trailing" constant="33" id="ujG-L9-vxT"/>
+                            <constraint firstItem="m7t-FL-oa6" firstAttribute="height" secondItem="3r0-35-QiZ" secondAttribute="height" id="vQ8-Kv-fmU"/>
+                            <constraint firstItem="3r0-35-QiZ" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="w8i-wG-d36"/>
                             <constraint firstItem="m7t-FL-oa6" firstAttribute="top" secondItem="g6s-bw-EBE" secondAttribute="bottom" constant="47" id="wSI-5e-abO"/>
+                            <constraint firstItem="3r0-35-QiZ" firstAttribute="width" secondItem="nU6-ab-zIH" secondAttribute="width" id="wrt-J5-CKs"/>
+                            <constraint firstItem="g6s-bw-EBE" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="x6G-Ky-Nlv"/>
                             <constraint firstAttribute="centerX" secondItem="c5v-D8-YDQ" secondAttribute="centerX" id="xNd-wj-yMQ"/>
                             <constraint firstItem="m7t-FL-oa6" firstAttribute="leading" secondItem="Urd-yG-gTP" secondAttribute="trailing" constant="30" id="y8N-Uh-dE1"/>
                             <constraint firstItem="3r0-35-QiZ" firstAttribute="leading" secondItem="rdh-ja-DEl" secondAttribute="trailing" constant="29" id="zjs-RX-F0q"/>
@@ -151,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="843" y="-317"/>
+            <point key="canvasLocation" x="1397" y="-364"/>
         </scene>
         <!--Advanced Sentences-->
         <scene sceneID="wg7-f3-ORb">
@@ -172,7 +211,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
                                 <rect key="frame" x="192" y="329" width="216" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
