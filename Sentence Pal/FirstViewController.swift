@@ -3,7 +3,7 @@
 //  Sentence Pal
 //
 //  Created by Jon Simington on 9/27/15.
-//  Copyright (c) 2015 JaySik Studios. All rights reserved.
+//  Copyright (c) 2015 Jon Simington. All rights reserved.
 //
 
 import UIKit
@@ -134,6 +134,20 @@ class FirstViewController: UIViewController {
         threeSentenceLabel.text = generateSimpleSentence()
         fourSentenceLabel.text = generateSimpleSentence()
         fiveSentenceLabel.text = generateSimpleSentence()
+        
+        // TODO: MAKE FUNCTION THAT PARSES A STRUCTURE AND GENERATES ANY SENTENCE
+    }
+    
+    // returns sentence built from structure passed
+    func generateSentence(stucture: String) -> String {
+        var list: [Array] = []
+        
+        for token in stucture.words {
+            switch token.lowercaseString {
+                case "noun":
+                    list = nouns
+            }
+        }
     }
     
     // Generates a random <noun> <verb> sentence

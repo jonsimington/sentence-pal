@@ -192,8 +192,9 @@
 		DD9683871BB8ED98000B4F1B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = "JaySik Studios";
+				ORGANIZATIONNAME = "Jon Simington";
 				TargetAttributes = {
 					DD96838E1BB8ED98000B4F1B = {
 						CreatedOnToolsVersion = 6.3.2;
