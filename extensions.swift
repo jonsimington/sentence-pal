@@ -14,3 +14,10 @@ extension Int
     
 }
 
+// Converts string to array of words
+extension String {
+    var words:[String] {
+        return "".join(componentsSeparatedByCharactersInSet(NSCharacterSet.punctuationCharacterSet())).componentsSeparatedByString(" ")
+    }
+}
+
