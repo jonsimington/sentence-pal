@@ -9,33 +9,6 @@
 import UIKit
 import Parsimmon
 
-func random(range: Range<Int> ) -> Int
-{
-    var offset = 0
-    
-    if range.startIndex < 0   // allow negative ranges
-    {
-        offset = abs(range.startIndex)
-    }
-    
-    let mini = UInt32(range.startIndex + offset)
-    let maxi = UInt32(range.endIndex   + offset)
-    
-    return Int(mini + arc4random_uniform(maxi - mini)) - offset
-}
-
-// Returns the last character of a string
-func lastChar(string: String) -> Character {
-    let char: Character = string[string.endIndex.predecessor()]
-    return char
-}
-
-// Returns the first character of a string
-func firstChar(string: String) -> Character {
-    let char: Character = string[string.startIndex]
-    return char
-}
-
 class FirstViewController: UIViewController {
     
     // UILabels
@@ -54,11 +27,11 @@ class FirstViewController: UIViewController {
     // UIButtons
     @IBOutlet weak var generateSentencesButton: UIButton!
     @IBAction func generateSentencesButtonPressed(sender: UIButton) {
-        oneSentenceLabel.text = generateSimpleSentence()
-        twoSentenceLabel.text = generateSimpleSentence()
-        threeSentenceLabel.text = generateSimpleSentence()
-        fourSentenceLabel.text = generateSimpleSentence()
-        fiveSentenceLabel.text = generateSimpleSentence()
+        oneSentenceLabel.text = generateSentence("personal_name verb period")
+        twoSentenceLabel.text = generateSentence("personal_name verb noun .")
+        threeSentenceLabel.text = generateSentence("personal_name verb adverb <period>")
+        fourSentenceLabel.text = generateSentence("personal_name verb adverb <period>")
+        fiveSentenceLabel.text = generateSentence("personal_name verb adverb <period>")
     }
     
     // NLP machines
@@ -129,25 +102,73 @@ class FirstViewController: UIViewController {
         
         setUp()
         
-        oneSentenceLabel.text = generateSimpleSentence()
-        twoSentenceLabel.text = generateSimpleSentence()
-        threeSentenceLabel.text = generateSimpleSentence()
-        fourSentenceLabel.text = generateSimpleSentence()
-        fiveSentenceLabel.text = generateSimpleSentence()
-        
-        // TODO: MAKE FUNCTION THAT PARSES A STRUCTURE AND GENERATES ANY SENTENCE
+        oneSentenceLabel.text = generateSentence("personal_name verb period")
+        twoSentenceLabel.text = generateSentence("personal_name verb noun .")
+        threeSentenceLabel.text = generateSentence("personal_name verb adverb <period>")
+        fourSentenceLabel.text = generateSentence("personal_name verb adverb <period>")
+        fiveSentenceLabel.text = generateSentence("personal_name verb adverb <period>")
     }
     
     // returns sentence built from structure passed
-    func generateSentence(stucture: String) -> String {
-        var list: [Array] = []
+    func generateSentence(structure: String) -> String {
+        var word: String = ""
+        let words = structure.words()
+        var string: String = ""
         
-        for token in stucture.words {
+        for token in words {
             switch token.lowercaseString {
-                case "noun":
-                    list = nouns
+            case "noun":
+                word = nouns[random(0...nouns.count)]
+            case "adjective", "adj":
+                word = adjectives[random(0...adjectives.count)]
+            case "verb":
+                word = verbs[random(0...verbs.count)]
+            case "determiner", "det":
+                word = determiners[random(0...determiners.count)]
+            case "preposition", "prep":
+                word = prepositions[random(0...prepositions.count)]
+            case "adverb", "adv":
+                word = adverbs[random(0...adverbs.count)]
+            case "conjunction", "conj":
+                word = conjunctions[random(0...conjunctions.count)]
+            case "number":
+                word = numbers[random(0...numbers.count)]
+            case "pronoun":
+                word = pronouns[random(0...pronouns.count)]
+            case "place_name":
+                word = place_names[random(0...place_names.count)]
+            case "personal_name":
+                word = personal_names[random(0...personal_names.count)]
+            case "particle":
+                word = particles[random(0...particles.count)]
+            case "interjection":
+                word = interjections[random(0...interjections.count)]
+            case "organization_name":
+                word = organization_names[random(0...organization_names.count)]
+            case "uarticle":
+                word = uarticles[random(0...uarticles.count)]
+            case "<the>", "the":
+                word = "the"
+            case "<period>", "period":
+                word = "."
+                
+            default:
+                word = ""
+            }
+            
+            if token == words[0] {
+                word = word.capitalizedString
+            }
+            
+            if word == "." {
+                string += word
+            }
+            else {
+                string += " " + word
             }
         }
+        print(string)
+        return string
     }
     
     // Generates a random <noun> <verb> sentence
